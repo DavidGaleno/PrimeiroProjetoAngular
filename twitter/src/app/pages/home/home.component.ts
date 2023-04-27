@@ -12,5 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.tweets = this.service.getMessages()
   }
+  deleteAllTweets(){
+    this.service.clearMessages()
+  }
 
 }

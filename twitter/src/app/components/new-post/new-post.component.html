@@ -2,7 +2,8 @@
     <div class="flex justify-center w-full">
         <app-avatar-icon />
         <div class="flex-1">
-            <textarea (keyup.enter)="sendTweet()" (input)="changeRemainLength()" [(ngModel)]="tweetMessage" [maxlength]="tweetMaxLength"
+            <textarea (keyup.enter)="sendTweet()" (input)="changeRemainLength()" [(ngModel)]="tweetMessage"
+                [maxlength]="tweetMaxLength"
                 class="mb-2 bg-gray-200 hover:bg-gray-100 focus:outline-none focus:shadow-outline focus:duration-0 focus:bg-gray-100 duration-700 resize-none border border-transparent rounded-lg px-2 py-4 block w-full appearance-none leading-normal font-light placeholder-gray-700"
                 placeholder="What's Happening..." rows="3"></textarea>
             <div class="w-auto border rounded-lg"></div>
@@ -10,9 +11,11 @@
                 <div class="mr-5 font-thin text-gray-500">
                     <p>{{tweetRemainLength}}</p>
                 </div>
-                <div class="mt-5">
+                <div class="mt-5 flex gap-2">
                     <button (click)="sendTweet()" type="button"
                         class="bg-blue-300 hover:bg-cyan-200 w-20 focus:outline-none border-transparent rounded-lg px-5 py-2 text-gray-700 font-medium">Tweet</button>
+                    <button (click)="clearTweet()" type="button"
+                        class="bg-red-600 hover:bg-red-500 w-20 focus:outline-none border-transparent rounded-lg px-5 py-2 text-gray-700 font-medium">Clear</button>
                 </div>
             </div>
         </div>

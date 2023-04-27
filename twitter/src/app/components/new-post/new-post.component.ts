@@ -14,6 +14,10 @@ export class NewPostComponent {
     this.tweetMessage = "" 
     this.tweetRemainLength = this.tweetMaxLength
   }
+  clearTweet(){
+    this.tweetMessage = ""
+    this.tweetRemainLength = this.tweetMaxLength
+  }
   tweetMessage : string = ""
   tweetMaxLength: number = 140
   tweetRemainLength : number = this.tweetMaxLength
