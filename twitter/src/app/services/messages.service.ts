@@ -10,9 +10,7 @@ export class MessagesService {
     this.messages.push(message)
   }
   deleteMessage(message: string) {
-    console.log(typeof (this.messages[0]))
-    console.log(typeof (message))
-    this.messages.splice(this.messages.indexOf(message, 0))
+    this.messages.splice(this.messages.indexOf(message),1)
   }
   getMessages() {
     return this.messages
